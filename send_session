@@ -1,3 +1,9 @@
 #!/bin/bash
 
-echo "Testing...."
+#get name of client and email from command line var
+
+#export video to audio, place in dir w/birthchart .png & key
+
+#Compress dir
+
+#Send, and clean up!
