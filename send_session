@@ -1,6 +1,11 @@
 #!/bin/bash
 
 #get name of client and email from command line var
+client=$1
+email=$2
+
+echo $client
+echo $email 
 
 #export video to audio, place in dir w/birthchart .png & key
 
