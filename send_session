@@ -3,11 +3,11 @@
 #get name of client and email from command line var
 client=$1
 email=$2
-
-echo $client
-echo $email 
+filename=$3
 
 #export video to audio, place in dir w/birthchart .png & key
+cp -r ~/Desktop/mindflower/readings ~/Desktop/mindflower/$1
+ffmpeg -i ~/Downloads/img_$3.mov -acodec copy -vcodec copy ~/Desktop/mindflower/$1/$1.m4v
 
 #Compress dir
 
