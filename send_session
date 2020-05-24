@@ -4,11 +4,12 @@
 client=$1
 email=$2
 filename=$3
-
+path=~/Desktop/mindflower
 #export video to audio, place in dir w/birthchart .png & key
-cp -r ~/Desktop/mindflower/readings ~/Desktop/mindflower/$1
-ffmpeg -i ~/Downloads/img_$3.mov -acodec copy -vcodec copy ~/Desktop/mindflower/$1/$1.m4v
+cp -r ~/Desktop/mindflower/readings ./$client
+ffmpeg -i ~/Downloads/img_$3.mov -acodec copy -vcodec copy ./$client/$client.m4v
 
 #Compress dir
+zip -r $client.zip ./$client
 
 #Send, and clean up!
