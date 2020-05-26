@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#get name of client and email from command line var
+client=$1
+email=$2
+filename=$3
+readings=~/Desktop/mindflower/readings
+
+#export video to audio, place in dir w/birthchart .png & key
+cp -r $readings ./$client
+ffmpeg -i ~/Downloads/img_$3.mov -acodec copy -vcodec copy ./$client/$client.m4v
+
+#Compress dir
+zip -r $client.zip ./$client
+
+#Send, and clean up!
