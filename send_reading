@@ -13,4 +13,10 @@ ffmpeg -i ~/Downloads/img_$3.mov -acodec copy -vcodec copy ./$client/$client.m4v
 #Compress dir
 zip -r $client.zip ./$client
 
-#Send, and clean up!
+#upload to google drive, & delete local version once upload completes
+gdrive upload --delete $client.zip
+
+#cat gdrive list into .txt file to enable file ID extraction for sharing
+gdrive list > files.tx
+
+#call python script to extract file ID
